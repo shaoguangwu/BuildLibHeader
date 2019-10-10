@@ -92,7 +92,7 @@ void writeLibHeader(const StringVector &libd_list, const StringVector& libr_list
     // debug lib
     for (const auto& str : libd_list)
     {
-        buff = "#    pragma comment(lib, " + str + ") \n";
+        buff = "#    pragma comment(lib, \"" + str + "\") \n";
         stream.write(buff.c_str(), buff.size());
     }
 
@@ -103,7 +103,7 @@ void writeLibHeader(const StringVector &libd_list, const StringVector& libr_list
     // release lib
     for (const auto& str : libr_list)
     {
-        buff = "#    pragma comment(lib, " + str + ") \n";
+        buff = "#    pragma comment(lib, \"" + str + "\") \n";
         stream.write(buff.c_str(), buff.size());
     }
     // #endif
